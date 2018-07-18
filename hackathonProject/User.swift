@@ -14,6 +14,9 @@ class User{
     
     let uid: String
     let username: String
+ //   let firstName: String
+ //   let lastName: String
+    
     
     //MARK: - Init
     
