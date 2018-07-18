@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wKN-sS-wy6">
-
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -16,7 +14,6 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="hackathonProject" customModuleProvider="target" sceneMemberID="viewController">
-
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="mainView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -39,7 +36,6 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="nkr-RC-Gxo"/>
@@ -47,7 +43,7 @@
                         <outlet property="draftALetter" destination="LWz-sf-0Nj" id="a2c-9m-6ek"/>
                         <outlet property="startALetter" destination="LWz-sf-0Nj" id="qjr-kn-k8P"/>
                         <segue destination="n0y-0h-76o" kind="show" identifier="writeALetter" id="mcI-iz-ni1"/>
-                        <segue destination="UGU-gL-aK0" kind="show" identifier="draft" id="5Xl-64-yul"/>
+                        <segue destination="8qD-MC-AkK" kind="show" identifier="draft" id="2YJ-oe-apz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -55,36 +51,36 @@
             <point key="canvasLocation" x="1040.8" y="298.2008995502249"/>
         </scene>
         <!--Table View Controller-->
-        <scene sceneID="7QT-OM-xqX">
+        <scene sceneID="WN9-mu-3qc">
             <objects>
-                <tableViewController id="UGU-gL-aK0" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="JLl-YY-DeX">
+                <tableViewController id="8qD-MC-AkK" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Dob-2W-rHn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="kf6-Gs-hX0">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="DZA-bV-2Jy">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kf6-Gs-hX0" id="4i6-19-6gL">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DZA-bV-2Jy" id="mPg-XK-v6V">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="UGU-gL-aK0" id="RNh-8K-LEu"/>
-                            <outlet property="delegate" destination="UGU-gL-aK0" id="FM8-9f-Zbr"/>
+                            <outlet property="dataSource" destination="8qD-MC-AkK" id="WqI-jP-EFM"/>
+                            <outlet property="delegate" destination="8qD-MC-AkK" id="JmY-Sa-iwg"/>
                         </connections>
                     </tableView>
                     <connections>
-                        <segue destination="Jy5-OV-etz" kind="unwind" identifier="draft" unwindAction="unwindWithSegue:" id="r3K-Oz-U6d"/>
+                        <segue destination="Qx6-ZF-ucr" kind="unwind" unwindAction="unwindWithSegue:" id="5Ew-Y0-e6e"/>
                     </connections>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="z02-Dr-G0a" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="Jy5-OV-etz" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jLJ-uC-uco" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Qx6-ZF-ucr" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1962" y="-54"/>
+            <point key="canvasLocation" x="1905" y="-27"/>
         </scene>
         <!--writeALetterViewController-->
         <scene sceneID="rIa-EC-pU7">
