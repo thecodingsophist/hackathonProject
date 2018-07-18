@@ -17,6 +17,9 @@
 		19B7C2D320FE973B00E3D7F4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 19B7C2D220FE973A00E3D7F4 /* GoogleService-Info.plist */; };
 		19B7C2D720FEA24000E3D7F4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B7C2D620FEA24000E3D7F4 /* User.swift */; };
 		5DE513E8AFACDE37CE14999D /* Pods_hackathonProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23957E5D10209F0AAEADAB92 /* Pods_hackathonProject.framework */; };
+		E1EC166520FFDC4500B84A40 /* Drafts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E1EC166320FFDC4500B84A40 /* Drafts.xcdatamodeld */; };
+		E1EC166820FFDF7A00B84A40 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EC166720FFDF7A00B84A40 /* CoreDataHelper.swift */; };
+		E1EC166E20FFE41800B84A40 /* DraftTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EC166D20FFE41800B84A40 /* DraftTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		19B7C2D620FEA24000E3D7F4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		23957E5D10209F0AAEADAB92 /* Pods_hackathonProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hackathonProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E70AE9A2E2E6E699C4C62C5 /* Pods-hackathonProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackathonProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-hackathonProject/Pods-hackathonProject.release.xcconfig"; sourceTree = "<group>"; };
+		E1EC166420FFDC4500B84A40 /* Drafts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Drafts.xcdatamodel; sourceTree = "<group>"; };
+		E1EC166720FFDF7A00B84A40 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		E1EC166D20FFE41800B84A40 /* DraftTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraftTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +75,8 @@
 		19B7C2BB20FD467800E3D7F4 /* hackathonProject */ = {
 			isa = PBXGroup;
 			children = (
+				E1EC166620FFDF6300B84A40 /* Helpers */,
+				E1EC166220FFDC1E00B84A40 /* Model */,
 				19B7C2D620FEA24000E3D7F4 /* User.swift */,
 				19B7C2D520FE9AD700E3D7F4 /* Controllers */,
 				19B7C2D420FE9A0B00E3D7F4 /* Storyboards */,
@@ -95,6 +103,7 @@
 			children = (
 				19B7C2BE20FD467800E3D7F4 /* ViewController.swift */,
 				19B7C2D020FD475F00E3D7F4 /* LoginViewController.swift */,
+				E1EC166D20FFE41800B84A40 /* DraftTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -114,6 +123,22 @@
 				6E70AE9A2E2E6E699C4C62C5 /* Pods-hackathonProject.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		E1EC166220FFDC1E00B84A40 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E1EC166320FFDC4500B84A40 /* Drafts.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E1EC166620FFDF6300B84A40 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E1EC166720FFDF7A00B84A40 /* CoreDataHelper.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,8 +279,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1EC166820FFDF7A00B84A40 /* CoreDataHelper.swift in Sources */,
+				E1EC166E20FFE41800B84A40 /* DraftTableViewController.swift in Sources */,
 				19B7C2D720FEA24000E3D7F4 /* User.swift in Sources */,
 				19B7C2D120FD475F00E3D7F4 /* LoginViewController.swift in Sources */,
+				E1EC166520FFDC4500B84A40 /* Drafts.xcdatamodeld in Sources */,
 				19B7C2BF20FD467800E3D7F4 /* ViewController.swift in Sources */,
 				19B7C2BD20FD467800E3D7F4 /* AppDelegate.swift in Sources */,
 			);
@@ -455,6 +483,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E1EC166320FFDC4500B84A40 /* Drafts.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E1EC166420FFDC4500B84A40 /* Drafts.xcdatamodel */,
+			);
+			currentVersion = E1EC166420FFDC4500B84A40 /* Drafts.xcdatamodel */;
+			path = Drafts.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 19B7C2B120FD467800E3D7F4 /* Project object */;
 }
