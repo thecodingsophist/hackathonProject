@@ -22,7 +22,7 @@ struct CoreDataHelper {
     }()
     
     static func newDraft() -> Draft {
-        let Draft = NSEntityDescription.insertNewObject(forEntityName: "Draft", into: context) as! Draft
+        let draft = NSEntityDescription.insertNewObject(forEntityName: "Draft", into: context) as! Draft
         
         return draft
     }
@@ -43,7 +43,7 @@ struct CoreDataHelper {
     
     static func retrieveDrafts() -> [Draft] {
         do {
-            let fetchRequest = NSFetchRequest<Note>(entityName: "Draft")
+            let fetchRequest = NSFetchRequest<Draft>(entityName: "Draft")
             let results = try context.fetch(fetchRequest)
             
             return results
