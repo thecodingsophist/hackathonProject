@@ -28,8 +28,10 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginButtonPressed(_ sender: Any) {
+        print("login button pressed")
+        
         guard let authUI = FUIAuth.defaultAuthUI()
-            else{return}
+            else { return }
         
         authUI.delegate = self
         
@@ -40,22 +42,26 @@ class LoginViewController: UIViewController {
 }
 
 extension LoginViewController: FUIAuthDelegate{
-    func authUI( _ authUI: FUIAuth, didSignInWith authDataResult: AuthDataResult?, error: Error?){
-        if let error = error{
+    func authUI(_ authUI: FUIAuth, didSignInWith authDataResult: AuthDataResult?, error: Error?) {
+        if let error = error {
             assertionFailure("Error signing in: \(error.localizedDescription)")
             return
         }
         
-       guard let user = authDataResult?.user
-        else { return }
+        // 1
+        guard let user = authDataResult?.user
+            else { return }
         
+        // 2
         let userRef = Database.database().reference().child("users").child(user.uid)
+
         
-        userRef.observeSingleEvent(of: .value, with: {(snapshot) in
+        userRef.observeSingleEvent(of: .value, with: {  (snapshot) in
+            print("data was accessed")
             if let user = User(snapshot: snapshot) {
-                print("welcome back, \(user.username)")
+                print("Welcome back, \(user.username).")
             } else {
-                print ("New user!")
+                self.performSegue(withIdentifier: "toCreateAccount", sender: self)
             }
         })
     }

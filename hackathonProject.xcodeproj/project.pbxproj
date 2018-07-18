@@ -16,6 +16,7 @@
 		19B7C2D120FD475F00E3D7F4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B7C2D020FD475F00E3D7F4 /* LoginViewController.swift */; };
 		19B7C2D320FE973B00E3D7F4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 19B7C2D220FE973A00E3D7F4 /* GoogleService-Info.plist */; };
 		19B7C2D720FEA24000E3D7F4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B7C2D620FEA24000E3D7F4 /* User.swift */; };
+		19DB5CB620FEB7AE007F64D2 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DB5CB520FEB7AE007F64D2 /* CreateAccountViewController.swift */; };
 		5DE513E8AFACDE37CE14999D /* Pods_hackathonProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23957E5D10209F0AAEADAB92 /* Pods_hackathonProject.framework */; };
 		E1EC166520FFDC4500B84A40 /* Drafts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E1EC166320FFDC4500B84A40 /* Drafts.xcdatamodeld */; };
 		E1EC166820FFDF7A00B84A40 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EC166720FFDF7A00B84A40 /* CoreDataHelper.swift */; };
@@ -35,6 +36,7 @@
 		19B7C2D020FD475F00E3D7F4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		19B7C2D220FE973A00E3D7F4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		19B7C2D620FEA24000E3D7F4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		19DB5CB520FEB7AE007F64D2 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreateAccountViewController.swift; path = hackathonProject/Controllers/CreateAccountViewController.swift; sourceTree = SOURCE_ROOT; };
 		23957E5D10209F0AAEADAB92 /* Pods_hackathonProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hackathonProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E70AE9A2E2E6E699C4C62C5 /* Pods-hackathonProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackathonProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-hackathonProject/Pods-hackathonProject.release.xcconfig"; sourceTree = "<group>"; };
 		E1EC166420FFDC4500B84A40 /* Drafts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Drafts.xcdatamodel; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				19B7C2BE20FD467800E3D7F4 /* ViewController.swift */,
 				19B7C2D020FD475F00E3D7F4 /* LoginViewController.swift */,
 				E1EC166D20FFE41800B84A40 /* DraftTableViewController.swift */,
+				19DB5CB520FEB7AE007F64D2 /* CreateAccountViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 			files = (
 				E1EC166820FFDF7A00B84A40 /* CoreDataHelper.swift in Sources */,
 				E1EC166E20FFE41800B84A40 /* DraftTableViewController.swift in Sources */,
+				19DB5CB620FEB7AE007F64D2 /* CreateAccountViewController.swift in Sources */,
 				19B7C2D720FEA24000E3D7F4 /* User.swift in Sources */,
 				19B7C2D120FD475F00E3D7F4 /* LoginViewController.swift in Sources */,
 				E1EC166520FFDC4500B84A40 /* Drafts.xcdatamodeld in Sources */,
