@@ -13,7 +13,7 @@ import FirebaseDatabase
 
 class LoginViewController: UIViewController {
  
-    typealias FIRUSER = FirebaseAuth.User
+    typealias FIRUser = FirebaseAuth.User
     
     @IBOutlet weak var loginButton: UIButton!
 
