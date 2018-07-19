@@ -28,7 +28,6 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginButtonPressed(_ sender: Any) {
-        print("login button pressed")
         
         guard let authUI = FUIAuth.defaultAuthUI()
             else { return }
