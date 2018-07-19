@@ -18,11 +18,11 @@
 		19B7C2D720FEA24000E3D7F4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B7C2D620FEA24000E3D7F4 /* User.swift */; };
 		19DB5CB620FEB7AE007F64D2 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DB5CB520FEB7AE007F64D2 /* CreateAccountViewController.swift */; };
 		19DB5CB820FFEDA6007F64D2 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DB5CB720FFEDA6007F64D2 /* UserService.swift */; };
-		19DB5CBC20FFFD84007F64D2 /* Untitled@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 19DB5CBB20FFFD84007F64D2 /* Untitled@3x.png */; };
 		5DE513E8AFACDE37CE14999D /* Pods_hackathonProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23957E5D10209F0AAEADAB92 /* Pods_hackathonProject.framework */; };
 		E1EC166520FFDC4500B84A40 /* Drafts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E1EC166320FFDC4500B84A40 /* Drafts.xcdatamodeld */; };
 		E1EC166820FFDF7A00B84A40 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EC166720FFDF7A00B84A40 /* CoreDataHelper.swift */; };
 		E1EC166E20FFE41800B84A40 /* DraftTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EC166D20FFE41800B84A40 /* DraftTableViewController.swift */; };
+		E1EC167020FFF50000B84A40 /* Draft.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1EC166F20FFF50000B84A40 /* Draft.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,12 +40,12 @@
 		19B7C2D620FEA24000E3D7F4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		19DB5CB520FEB7AE007F64D2 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreateAccountViewController.swift; path = hackathonProject/Controllers/CreateAccountViewController.swift; sourceTree = SOURCE_ROOT; };
 		19DB5CB720FFEDA6007F64D2 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
-		19DB5CBB20FFFD84007F64D2 /* Untitled@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Untitled@3x.png"; path = "../../../Downloads/Untitled@3x.png"; sourceTree = "<group>"; };
 		23957E5D10209F0AAEADAB92 /* Pods_hackathonProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hackathonProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E70AE9A2E2E6E699C4C62C5 /* Pods-hackathonProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackathonProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-hackathonProject/Pods-hackathonProject.release.xcconfig"; sourceTree = "<group>"; };
 		E1EC166420FFDC4500B84A40 /* Drafts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Drafts.xcdatamodel; sourceTree = "<group>"; };
 		E1EC166720FFDF7A00B84A40 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		E1EC166D20FFE41800B84A40 /* DraftTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraftTableViewController.swift; sourceTree = "<group>"; };
+		E1EC166F20FFF50000B84A40 /* Draft.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Draft.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +81,6 @@
 		19B7C2BB20FD467800E3D7F4 /* hackathonProject */ = {
 			isa = PBXGroup;
 			children = (
-				19DB5CBB20FFFD84007F64D2 /* Untitled@3x.png */,
 				E1EC166620FFDF6300B84A40 /* Helpers */,
 				E1EC166220FFDC1E00B84A40 /* Model */,
 				19B7C2D620FEA24000E3D7F4 /* User.swift */,
@@ -99,6 +98,7 @@
 		19B7C2D420FE9A0B00E3D7F4 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				E1EC166F20FFF50000B84A40 /* Draft.storyboard */,
 				19B7C2C020FD467800E3D7F4 /* Main.storyboard */,
 				19B7C2CE20FD46F900E3D7F4 /* Login.storyboard */,
 				19B7C2C520FD467C00E3D7F4 /* LaunchScreen.storyboard */,
@@ -212,7 +212,7 @@
 			files = (
 				19B7C2CF20FD46F900E3D7F4 /* Login.storyboard in Resources */,
 				19B7C2C720FD467C00E3D7F4 /* LaunchScreen.storyboard in Resources */,
-				19DB5CBC20FFFD84007F64D2 /* Untitled@3x.png in Resources */,
+				E1EC167020FFF50000B84A40 /* Draft.storyboard in Resources */,
 				19B7C2D320FE973B00E3D7F4 /* GoogleService-Info.plist in Resources */,
 				19B7C2C420FD467C00E3D7F4 /* Assets.xcassets in Resources */,
 				19B7C2C220FD467800E3D7F4 /* Main.storyboard in Resources */,
