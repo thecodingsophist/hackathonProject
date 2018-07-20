@@ -20,6 +20,38 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        // test the api call
+        
+        let draft = CoreDataHelper.newDraft()
+        let recipient = draft.recipient
+        recipient?.lastName = "Songolo"
+        recipient?.firstName = "Yves"
+        
+        let address  = CoreDataHelper.newAddress()
+        
+        address.street = "1368 Natomo St."
+        address.city = "San Francisco"
+        address.state = "CA"
+        address.zipCode = "94103"
+        
+        let name = ("\(draft.recipient?.firstName ?? "No Name") \(draft.recipient?.lastName ?? "No Name")")
+        
+        
+        let userAddress = UserAddress(street: "835 Turk St", city: "San Francisco", state: "CA", zipCode: "94102")
+        
+        MailingManager.getRecipientMailID(name: name, address: address) { (recipientID) in
+            
+            MailingManager.getUserMailID(name: "Colleen ", address: userAddress, callback: { (userID) in
+                
+                // send mail
+                print(userID)
+                print(recipientID)
+                
+                
+                MailingManager.sendMail(user: <#T##User#>, userID: userID, recipientID: recipientID, callback: <#T##() -> ()#>)
+            })
+        }
     }
     
     override func didReceiveMemoryWarning() {

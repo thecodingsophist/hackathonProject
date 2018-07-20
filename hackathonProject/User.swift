@@ -31,3 +31,10 @@ class User{
         self.username = username
     }
 }
+
+struct UserAddress {
+    let street: String
+    let city: String
+    let state: String
+    let zipCode: String
+}
