@@ -1,0 +1,43 @@
+<html>
+
+<head>
+
+</head>
+
+<div style="width: 400px; background-color: #fff; padding: 15px;">
+
+<div align="right">
+
+10 Downing Street <br/>
+
+Westminster<br/>
+
+London<br/>
+
+</div>
+
+<p>Subject/Reference</p> <!-- this can be removed -->
+
+<p>
+
+Dear Sir/Madam </p>
+
+<p>
+
+...letter content...
+
+</p>
+
+<div align="center"> <!-- this can be changed to "left" if preferred-->
+
+Regards <br /><br /><br />
+
+Mr. Mick Karma
+
+</div>
+
+</div>
+
+</body>
+
+</html>

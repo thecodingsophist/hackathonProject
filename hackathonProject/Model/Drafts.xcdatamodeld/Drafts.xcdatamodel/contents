@@ -8,6 +8,7 @@
         <attribute name="zipCode" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Draft" representedClassName="Draft" syncable="YES">
+        <attribute name="closing" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <relationship name="recipient" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Recipient" syncable="YES"/>
@@ -19,7 +20,7 @@
     </entity>
     <elements>
         <element name="Address" positionX="187" positionY="18" width="128" height="120"/>
-        <element name="Draft" positionX="-135" positionY="-3" width="128" height="90"/>
+        <element name="Draft" positionX="-135" positionY="-3" width="128" height="105"/>
         <element name="Recipient" positionX="16" positionY="81" width="128" height="90"/>
     </elements>
 </model>

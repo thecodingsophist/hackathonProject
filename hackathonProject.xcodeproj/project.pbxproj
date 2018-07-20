@@ -26,6 +26,8 @@
 		6115033521016DC500F0CFC9 /* Draft+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6115032F21016DC500F0CFC9 /* Draft+CoreDataProperties.swift */; };
 		6115033621016DC500F0CFC9 /* Recipient+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6115033021016DC500F0CFC9 /* Recipient+CoreDataClass.swift */; };
 		6115033721016DC500F0CFC9 /* Recipient+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6115033121016DC500F0CFC9 /* Recipient+CoreDataProperties.swift */; };
+		611503392102579500F0CFC9 /* HTMLTemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611503382102579500F0CFC9 /* HTMLTemplateViewController.swift */; };
+		6115033B21026D5700F0CFC9 /* HTMLTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6115033A21026D5700F0CFC9 /* HTMLTemplate.swift */; };
 		E1EC166520FFDC4500B84A40 /* Drafts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E1EC166320FFDC4500B84A40 /* Drafts.xcdatamodeld */; };
 		E1EC166820FFDF7A00B84A40 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EC166720FFDF7A00B84A40 /* CoreDataHelper.swift */; };
 		E1EC166E20FFE41800B84A40 /* DraftTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EC166D20FFE41800B84A40 /* DraftTableViewController.swift */; };
@@ -54,6 +56,8 @@
 		6115032F21016DC500F0CFC9 /* Draft+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Draft+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		6115033021016DC500F0CFC9 /* Recipient+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recipient+CoreDataClass.swift"; sourceTree = "<group>"; };
 		6115033121016DC500F0CFC9 /* Recipient+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recipient+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		611503382102579500F0CFC9 /* HTMLTemplateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLTemplateViewController.swift; sourceTree = "<group>"; };
+		6115033A21026D5700F0CFC9 /* HTMLTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLTemplate.swift; sourceTree = "<group>"; };
 		6E70AE9A2E2E6E699C4C62C5 /* Pods-hackathonProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackathonProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-hackathonProject/Pods-hackathonProject.release.xcconfig"; sourceTree = "<group>"; };
 		E1EC166420FFDC4500B84A40 /* Drafts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Drafts.xcdatamodel; sourceTree = "<group>"; };
 		E1EC166720FFDF7A00B84A40 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
@@ -125,6 +129,7 @@
 				19B7C2D020FD475F00E3D7F4 /* LoginViewController.swift */,
 				E1EC166D20FFE41800B84A40 /* DraftTableViewController.swift */,
 				19DB5CB520FEB7AE007F64D2 /* CreateAccountViewController.swift */,
+				611503382102579500F0CFC9 /* HTMLTemplateViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -164,6 +169,7 @@
 				6115033021016DC500F0CFC9 /* Recipient+CoreDataClass.swift */,
 				6115033121016DC500F0CFC9 /* Recipient+CoreDataProperties.swift */,
 				E1EC166320FFDC4500B84A40 /* Drafts.xcdatamodeld */,
+				6115033A21026D5700F0CFC9 /* HTMLTemplate.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -256,6 +262,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-hackathonProject/Pods-hackathonProject-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftSoup/SwiftSoup.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -263,6 +270,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSoup.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -316,8 +324,10 @@
 			files = (
 				E1EC166820FFDF7A00B84A40 /* CoreDataHelper.swift in Sources */,
 				E1EC166E20FFE41800B84A40 /* DraftTableViewController.swift in Sources */,
+				6115033B21026D5700F0CFC9 /* HTMLTemplate.swift in Sources */,
 				19DB5CB620FEB7AE007F64D2 /* CreateAccountViewController.swift in Sources */,
 				19B7C2D720FEA24000E3D7F4 /* User.swift in Sources */,
+				611503392102579500F0CFC9 /* HTMLTemplateViewController.swift in Sources */,
 				19DB5CB820FFEDA6007F64D2 /* UserService.swift in Sources */,
 				6115033621016DC500F0CFC9 /* Recipient+CoreDataClass.swift in Sources */,
 				6115033221016DC500F0CFC9 /* Address+CoreDataClass.swift in Sources */,

@@ -10,4 +10,4 @@ target 'hackathonProject' do
   pod 'FirebaseUI/Auth'
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
-end
+  pod 'SwiftSoup'

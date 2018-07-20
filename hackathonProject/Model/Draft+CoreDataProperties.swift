@@ -19,5 +19,7 @@ extension Draft {
     @NSManaged public var content: String?
     @NSManaged public var date: NSDate?
     @NSManaged public var recipient: Recipient?
+    @NSManaged public var closing: String?
+
 
 }

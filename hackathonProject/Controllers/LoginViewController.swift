@@ -49,7 +49,9 @@ class LoginViewController: UIViewController {
                 print(recipientID)
                 
                 
-                MailingManager.sendMail(user: <#T##User#>, userID: userID, recipientID: recipientID, callback: <#T##() -> ()#>)
+                MailingManager.sendMail(draft: draft, from: userID, to: recipientID, callback: {
+                    
+                })
             })
         }
     }

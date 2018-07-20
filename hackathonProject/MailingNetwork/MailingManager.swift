@@ -6,7 +6,8 @@
 //
 
 import Foundation
-import UIKit
+//import UIKit
+import SwiftSoup
 
 struct MailingManager {
     
@@ -15,9 +16,33 @@ struct MailingManager {
         let url = URL(string: link)!
         var request = URLRequest(url: url)
         
+       let file = htmlMailBody(draft: draft, senderName: "Colleen")
         
         
-        let body = ["from": userID, "to": recipient, "color": "false", "file": ""]
+        let body = ["from": userID, "to": recipient, "color": "false", "file": file]
+        
+        //turns body info into JSON data
+        let bodyData = try! JSONSerialization.data(withJSONObject: body, options: .prettyPrinted)
+        
+        //add the body into the request
+        request.httpBody = bodyData
+        
+        //add authorization into header
+        request.setValue("Basic dGVzdF82M2ZmMDgwNWNjZTFjZDI5OTg5N2ZmMzZkYzJiYjU0NjJkNjo=", forHTTPHeaderField: "Authorization")
+        
+        //create a url session
+        let session = URLSession.shared
+        
+        //create a task within the url session
+        let task = session.dataTask(with: request) {(data, response, error) in
+        guard let data = data else {
+            return
+        }
+        let dataID = try! JSONDecoder().decode(DataID.self, from: data)
+        callback()
+        }
+    
+    task.resume()
 
         
     }
@@ -26,7 +51,6 @@ struct MailingManager {
 
         // get link
         let link = "https://api.lob.com/v1/addresses"
-        
         // turn link to url
         let url = URL(string: link)!
        
@@ -98,86 +122,25 @@ static func getUserMailID(name: String, address: UserAddress, callback:@escaping
     }
     task.resume()
 }
-//    static func htmlMailBody(content: String, date: Date) -> String{
+    static func htmlMailBody(draft: Draft, senderName: String) -> String{
+
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let templateViewController = storyboard.instantiateViewController(withIdentifier: "htmlFormat") as! HTMLTemplateViewController
+        
+        let recipientFullName = "Heather Nolte"// draft.recipient!.firstName! + draft.recipient!.lastName!
+        let content = "I like panda express and i want to go eat :) \nMy Scoot will charge me soon."
+        let closing = "Hungry,"
+        let letter = HTMLTemplate (body: content, salutations: "Dear \(recipientFullName)", closing: closing, senderName: senderName )
+        
+        return letter.getHTML()
+//        let template = templateViewController.htmlTemplateTextView.text
+//        let salutation = template?.replacingOccurrences(of: "salutation", with: "salutation")
+//        let body = salutation?.replacingOccurrences(of: "letterContent", with: draft.content!)
+//        let closing = body?.replacingOccurrences(of: "closing", with: "closing")
+//        let finalTemplate = closing?.replacingOccurrences(of: "senderName", with: senderName)
 //
-//        let htmlString = "\(<html> <head> <meta charset=")\("UTF-8")"><link href="\("https:")//fonts.googleapis.com/css?family=Signika" rel="stylesheet" type="text/css"><title>Lob.com Sample Welcome Next Steps Letter</title><style>*, *:before, *:after {-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}body {width: 8.5in;height: 11in;margin: 0;padding: 0;
-//            }
-//            .page {
-//                page-break-after: always;
-//                position: relative;
-//                width: 8.5in;
-//                height: 11in;
-//            }
-//            .page-content {
-//                position: absolute;
-//                width: 8.125in;
-//                height: 10.625in;
-//                left: 0.1875in;
-//                top: 0.1875in;
-//                background-color: rgba(0,0,0,0);
-//                }
-//                .text {
-//                    position: relative;
-//                    top: 317px;
-//                    width: 7in;
-//                    margin: 0 auto;
-//                    font-family: 'Signika';
-//                    font-size: 12pt;
-//                    line-height: 13pt;
-//                }
-//                .green-text {
-//                    color: #73a044;
-//                    }
-//                    .date {
-//                        float:right;
-//        }
-//        #footer {
-//            position: absolute;
-//            left:64px;
-//            bottom: 32px;
-//            font-family: 'Signika';
-//            font-size: 10pt;
-//            text-align: left;
-//            color: #73a044;
-//        }
-//        #line {
-//            position: absolute;
-//            left: 123px;
-//            top: -20px;
-//            width:5.5in;
-//            height:5px;
-//            border-top: 1px solid #106387;
-//        }
-//        /* your main logo should have dimensions of at least 240x220 pixels. */
-//        #main-logo {
-//            position: absolute;
-//            left: 515px;
-//            top: 4px;
-//            width: 2in;
-//            height:.3in;
-//        }
-//        </style>
-//        </head>
-//
-//        <body>
-//        <div class="page">
-//        <div class="page-content">
-//        <div class="text">
-//        <span class="date">\(date)</span>
-//        <br><br>
-//        INTRODUCTION LINE<br><br>
-//        \(content)
-//        <br><br>
-//        CLOSING TAG<br><br>
-//        <span class="green-text">SENDERS NAME</span>
-//        </div>
-//        </div>
-//        </div>
-//
-//        </body>
-//
-//        </html> "
-//    }
+//        return finalTemplate!
+    }
 }
 
 struct DataID: Decodable{
