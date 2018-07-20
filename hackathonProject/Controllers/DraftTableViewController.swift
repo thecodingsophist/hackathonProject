@@ -48,6 +48,12 @@ class DraftTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return draft.count
     }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            draft.remove(at: indexPath.row)
+        }
+    }
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

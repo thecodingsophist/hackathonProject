@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Letters-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="hackathonProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -27,61 +27,42 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yvp-hN-2j0">
-                                <rect key="frame" x="141" y="178" width="92" height="30"/>
+                                <rect key="frame" x="75" y="165" width="224" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="Start A Letter"/>
                                 <connections>
                                     <action selector="startButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CE4-Pg-yhv"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ucy-Di-fSt">
+                                <rect key="frame" x="0.0" y="400" width="315" height="224"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Untitled-2.png" translatesAutoresizingMaskIntoConstraints="NO" id="b3B-Jm-9lQ">
+                                <rect key="frame" x="87" y="108" width="315" height="224"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="nkr-RC-Gxo"/>
+                    <navigationItem key="navigationItem" title="Letters" id="7eU-JO-7xP">
+                        <barButtonItem key="leftBarButtonItem" title="Settings" id="spZ-9Q-Cv6"/>
+                        <barButtonItem key="rightBarButtonItem" title="Help" id="dY5-bE-Kit"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="draftALetter" destination="LWz-sf-0Nj" id="a2c-9m-6ek"/>
                         <outlet property="startALetter" destination="LWz-sf-0Nj" id="qjr-kn-k8P"/>
-                        <segue destination="n0y-0h-76o" kind="show" identifier="writeALetter" id="mcI-iz-ni1"/>
-                        <segue destination="UGU-gL-aK0" kind="show" identifier="draft" id="5Xl-64-yul"/>
+                        <segue destination="HgS-ch-a0z" kind="show" identifier="draft" id="5Xl-64-yul"/>
+                        <segue destination="5xy-Jn-mQb" kind="show" identifier="toNewLetter" id="5lW-PH-eez"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1040.8" y="298.2008995502249"/>
+            <point key="canvasLocation" x="1036" y="298"/>
         </scene>
-        <!--Table View Controller-->
-        <scene sceneID="7QT-OM-xqX">
-            <objects>
-                <tableViewController id="UGU-gL-aK0" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="JLl-YY-DeX">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="kf6-Gs-hX0">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kf6-Gs-hX0" id="4i6-19-6gL">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="UGU-gL-aK0" id="RNh-8K-LEu"/>
-                            <outlet property="delegate" destination="UGU-gL-aK0" id="FM8-9f-Zbr"/>
-                        </connections>
-                    </tableView>
-                    <connections>
-                        <segue destination="Jy5-OV-etz" kind="unwind" identifier="draft" unwindAction="unwindWithSegue:" id="r3K-Oz-U6d"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="z02-Dr-G0a" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="Jy5-OV-etz" userLabel="Exit" sceneMemberID="exit"/>
-            </objects>
-            <point key="canvasLocation" x="1962" y="-54"/>
-        </scene>
+<<<<<<< HEAD
         <!--Template View Controller-->
         <scene sceneID="XMD-C4-pku">
             <objects>
@@ -147,22 +128,18 @@ senderName
         </scene>
         <!--writeALetterViewController-->
         <scene sceneID="rIa-EC-pU7">
+||||||| merged common ancestors
+        <!--writeALetterViewController-->
+        <scene sceneID="rIa-EC-pU7">
+=======
+        <!--NewLetter-->
+        <scene sceneID="kUd-bI-Gda">
+>>>>>>> new-letter
             <objects>
-                <viewController id="n0y-0h-76o" userLabel="writeALetterViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="P7u-dt-etl">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="7cX-eQ-dV7"/>
-                    </view>
-                    <connections>
-                        <segue destination="XRy-8Q-q6k" kind="unwind" identifier="writeToMain" unwindAction="unwindWithSegue:" id="IWa-VQ-7ok"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QQi-ae-wl8" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="XRy-8Q-q6k" userLabel="Exit" sceneMemberID="exit"/>
+                <viewControllerPlaceholder storyboardName="NewLetter" id="5xy-Jn-mQb" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E7I-fU-JuQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1904.8" y="677.81109445277366"/>
+            <point key="canvasLocation" x="1962" y="532"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0Fg-7V-dh3">
@@ -182,5 +159,16 @@ senderName
             </objects>
             <point key="canvasLocation" x="101.59999999999999" y="298.2008995502249"/>
         </scene>
+        <!--Draft-->
+        <scene sceneID="ETJ-3w-OoK">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Draft" id="HgS-ch-a0z" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w06-TG-hrC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1962" y="-54"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="Untitled-2.png" width="858" height="621"/>
+    </resources>
 </document>

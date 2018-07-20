@@ -31,31 +31,28 @@ class CreateAccountViewController: UIViewController {
     }
     
     @IBAction func nextButtonPressed(_ sender: Any) {
-        // 1
         guard let firUser = Auth.auth().currentUser,
-            let username = firstNameTextfield.text,
-            !username.isEmpty else { return }
+            let firstName = firstNameTextfield.text, !firstName.isEmpty,
+            let lastName = lastNameTextfield.text, !lastName.isEmpty,
+            let street = streetTextfield.text, !street.isEmpty,
+            let city = cityTextfield.text, !city.isEmpty,
+            let state = stateTextfield.text, !state.isEmpty,
+            let zipcodeStr = zipcodeTextfield.text, !zipcodeStr.isEmpty,
+            let zipcode = Int(zipcodeStr)
+        else { return }
         
-        // 2
-        let userAttrs = ["username": username]
-        
-        // 3
-        let ref = Database.database().reference().child("users").child(firUser.uid)
-        
-        // 4
-        ref.setValue(userAttrs) { (error, ref) in
-            if let error = error {
-                assertionFailure(error.localizedDescription)
-                return
-            }
+        UserService.create(firUser, firstName: firstName, lastName: lastName, street: street, city: city, state: state, zipcode: zipcode) { (user) in
+            guard let user = user else { return }
             
-            // 5
-            ref.observeSingleEvent(of: .value, with: { (snapshot) in
-                let user = User(snapshot: snapshot)
-                
-                // handle newly created user here
-            })
+            print("Created new user: \(user.firstName) \(user.lastName)")
         }
-    }
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: .main)
+        
+        if let initialViewController = storyboard.instantiateInitialViewController() {
+            self.view.window?.rootViewController = initialViewController
+            self.view.window?.makeKeyAndVisible()
+        }
     
+    }
 }

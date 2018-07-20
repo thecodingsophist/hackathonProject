@@ -18,6 +18,10 @@
 		19B7C2D720FEA24000E3D7F4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B7C2D620FEA24000E3D7F4 /* User.swift */; };
 		19DB5CB620FEB7AE007F64D2 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DB5CB520FEB7AE007F64D2 /* CreateAccountViewController.swift */; };
 		19DB5CB820FFEDA6007F64D2 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DB5CB720FFEDA6007F64D2 /* UserService.swift */; };
+		19DB5CC221014F43007F64D2 /* Untitled-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 19DB5CC121014F43007F64D2 /* Untitled-2.png */; };
+		19DB5CC7210250BD007F64D2 /* writeALetterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DB5CC6210250BD007F64D2 /* writeALetterViewController.swift */; };
+		19DB5CC92102544D007F64D2 /* NewLetter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19DB5CC82102544D007F64D2 /* NewLetter.storyboard */; };
+		19DB5CCB210259DF007F64D2 /* SendeeInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DB5CCA210259DF007F64D2 /* SendeeInfoViewController.swift */; };
 		5DE513E8AFACDE37CE14999D /* Pods_hackathonProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23957E5D10209F0AAEADAB92 /* Pods_hackathonProject.framework */; };
 		6115032B2101649B00F0CFC9 /* MailingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6115032A2101649B00F0CFC9 /* MailingManager.swift */; };
 		6115033221016DC500F0CFC9 /* Address+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6115032C21016DC500F0CFC9 /* Address+CoreDataClass.swift */; };
@@ -31,6 +35,7 @@
 		E1EC166520FFDC4500B84A40 /* Drafts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E1EC166320FFDC4500B84A40 /* Drafts.xcdatamodeld */; };
 		E1EC166820FFDF7A00B84A40 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EC166720FFDF7A00B84A40 /* CoreDataHelper.swift */; };
 		E1EC166E20FFE41800B84A40 /* DraftTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EC166D20FFE41800B84A40 /* DraftTableViewController.swift */; };
+		E1EC167020FFF50000B84A40 /* Draft.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1EC166F20FFF50000B84A40 /* Draft.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +53,11 @@
 		19B7C2D620FEA24000E3D7F4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		19DB5CB520FEB7AE007F64D2 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreateAccountViewController.swift; path = hackathonProject/Controllers/CreateAccountViewController.swift; sourceTree = SOURCE_ROOT; };
 		19DB5CB720FFEDA6007F64D2 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		19DB5CC121014F43007F64D2 /* Untitled-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Untitled-2.png"; path = "../../../../Downloads/Untitled-2.png"; sourceTree = "<group>"; };
+		19DB5CC321014F49007F64D2 /* Untitled-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Untitled-2.png"; sourceTree = "<group>"; };
+		19DB5CC6210250BD007F64D2 /* writeALetterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = writeALetterViewController.swift; sourceTree = "<group>"; };
+		19DB5CC82102544D007F64D2 /* NewLetter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewLetter.storyboard; sourceTree = "<group>"; };
+		19DB5CCA210259DF007F64D2 /* SendeeInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendeeInfoViewController.swift; sourceTree = "<group>"; };
 		23957E5D10209F0AAEADAB92 /* Pods_hackathonProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hackathonProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6115032A2101649B00F0CFC9 /* MailingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailingManager.swift; sourceTree = "<group>"; };
 		6115032C21016DC500F0CFC9 /* Address+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Address+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -62,6 +72,7 @@
 		E1EC166420FFDC4500B84A40 /* Drafts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Drafts.xcdatamodel; sourceTree = "<group>"; };
 		E1EC166720FFDF7A00B84A40 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		E1EC166D20FFE41800B84A40 /* DraftTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraftTableViewController.swift; sourceTree = "<group>"; };
+		E1EC166F20FFF50000B84A40 /* Draft.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Draft.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +119,7 @@
 				19B7C2C320FD467C00E3D7F4 /* Assets.xcassets */,
 				19B7C2C820FD467C00E3D7F4 /* Info.plist */,
 				19DB5CB720FFEDA6007F64D2 /* UserService.swift */,
+				19DB5CC321014F49007F64D2 /* Untitled-2.png */,
 			);
 			path = hackathonProject;
 			sourceTree = "<group>";
@@ -115,9 +127,11 @@
 		19B7C2D420FE9A0B00E3D7F4 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				E1EC166F20FFF50000B84A40 /* Draft.storyboard */,
 				19B7C2C020FD467800E3D7F4 /* Main.storyboard */,
 				19B7C2CE20FD46F900E3D7F4 /* Login.storyboard */,
 				19B7C2C520FD467C00E3D7F4 /* LaunchScreen.storyboard */,
+				19DB5CC82102544D007F64D2 /* NewLetter.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -125,11 +139,18 @@
 		19B7C2D520FE9AD700E3D7F4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				19DB5CC121014F43007F64D2 /* Untitled-2.png */,
 				19B7C2BE20FD467800E3D7F4 /* ViewController.swift */,
 				19B7C2D020FD475F00E3D7F4 /* LoginViewController.swift */,
 				E1EC166D20FFE41800B84A40 /* DraftTableViewController.swift */,
+				19DB5CC6210250BD007F64D2 /* writeALetterViewController.swift */,
 				19DB5CB520FEB7AE007F64D2 /* CreateAccountViewController.swift */,
+<<<<<<< HEAD
 				611503382102579500F0CFC9 /* HTMLTemplateViewController.swift */,
+||||||| merged common ancestors
+=======
+				19DB5CCA210259DF007F64D2 /* SendeeInfoViewController.swift */,
+>>>>>>> new-letter
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -244,8 +265,11 @@
 			files = (
 				19B7C2CF20FD46F900E3D7F4 /* Login.storyboard in Resources */,
 				19B7C2C720FD467C00E3D7F4 /* LaunchScreen.storyboard in Resources */,
+				E1EC167020FFF50000B84A40 /* Draft.storyboard in Resources */,
 				19B7C2D320FE973B00E3D7F4 /* GoogleService-Info.plist in Resources */,
 				19B7C2C420FD467C00E3D7F4 /* Assets.xcassets in Resources */,
+				19DB5CC92102544D007F64D2 /* NewLetter.storyboard in Resources */,
+				19DB5CC221014F43007F64D2 /* Untitled-2.png in Resources */,
 				19B7C2C220FD467800E3D7F4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,6 +346,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19DB5CC7210250BD007F64D2 /* writeALetterViewController.swift in Sources */,
 				E1EC166820FFDF7A00B84A40 /* CoreDataHelper.swift in Sources */,
 				E1EC166E20FFE41800B84A40 /* DraftTableViewController.swift in Sources */,
 				6115033B21026D5700F0CFC9 /* HTMLTemplate.swift in Sources */,
@@ -329,9 +354,14 @@
 				19B7C2D720FEA24000E3D7F4 /* User.swift in Sources */,
 				611503392102579500F0CFC9 /* HTMLTemplateViewController.swift in Sources */,
 				19DB5CB820FFEDA6007F64D2 /* UserService.swift in Sources */,
+<<<<<<< HEAD
 				6115033621016DC500F0CFC9 /* Recipient+CoreDataClass.swift in Sources */,
 				6115033221016DC500F0CFC9 /* Address+CoreDataClass.swift in Sources */,
 				6115033721016DC500F0CFC9 /* Recipient+CoreDataProperties.swift in Sources */,
+||||||| merged common ancestors
+=======
+				19DB5CCB210259DF007F64D2 /* SendeeInfoViewController.swift in Sources */,
+>>>>>>> new-letter
 				19B7C2D120FD475F00E3D7F4 /* LoginViewController.swift in Sources */,
 				6115033521016DC500F0CFC9 /* Draft+CoreDataProperties.swift in Sources */,
 				E1EC166520FFDC4500B84A40 /* Drafts.xcdatamodeld in Sources */,
